@@ -15,31 +15,60 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 
-  <style>
-    @media (max-width: 767px) {
-      .col-md-9,
-      .col-md-10,
-      .col-md-3 {
-        width: 100% !important;
-        float: none !important;
-        height: auto !important;
-      }
-
-      .container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-
-      .navbar-nav {
-        margin: 0;
-      }
-
-      img.img-responsive {
-        max-width: 100%;
-        height: auto;
-      }
+<style>
+  @media (max-width: 767px) {
+    .row {
+      display: flex;
+      flex-direction: column;
     }
-  </style>
+
+    /* Sidebar first on mobile */
+    .row > div:nth-child(2) {
+      order: 1;
+      width: 100% !important;
+      float: none !important;
+      height: auto !important;
+    }
+
+    .row > div:nth-child(3) {
+      order: 2;
+      width: 100% !important;
+      float: none !important;
+      height: auto !important;
+      margin-top: 10px;
+    }
+
+    /* Main content after sidebar on mobile */
+    .row > div:nth-child(1) {
+      order: 3;
+      width: 100% !important;
+      float: none !important;
+      height: auto !important;
+    }
+
+    /* These are inside the main column and should still be normal */
+    .col-md-10,
+    .col-md-9 {
+      width: 100% !important;
+      float: none !important;
+      height: auto !important;
+    }
+
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .navbar-nav {
+      margin: 0;
+    }
+
+    img.img-responsive {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+</style>
 
 </head>
 
